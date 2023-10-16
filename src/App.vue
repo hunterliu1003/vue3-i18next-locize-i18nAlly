@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { useTranslation, TranslationComponent } from "i18next-vue"
+import { useTranslation, TranslationComponent } from "./i18next-vue"
 import { computed } from "vue"
 import LanguageSwitcher from './components/LanguageSwitcher.vue'
 
-const { i18next, t } = useTranslation('translation')
+const { i18next, t } = useTranslation()
 
-const textInsurance = computed(() => t('insurance', { ns: 'translation' }))
+const textInsurance = computed(() => t('insurance'))
 
 const translationComponentExample = `
 <TranslationComponent :translation="$t('message')">

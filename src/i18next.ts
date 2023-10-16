@@ -1,6 +1,6 @@
 import { Plugin } from 'vue'
 import _i18next from 'i18next'
-import I18NextVue from 'i18next-vue'
+import I18NextVue from './i18next-vue'
 import LanguageDetector from 'i18next-browser-languagedetector'
 import BackendChained, { ChainedBackendOptions } from 'i18next-chained-backend'
 import BackendLocalStorage, { LocalStorageBackendOptions } from 'i18next-localstorage-backend'
