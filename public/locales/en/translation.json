@@ -4,7 +4,7 @@
     "unspecific": "Something went wrong."
   },
   "faq": "FAQ",
-  "iam": "I am {{ author.name }}",
+  "iam": "I am {{authorName}}",
   "insurance": "Insurance",
   "key": "{{what}} is {{how}}",
   "key1": "hello world",

@@ -1,6 +1,6 @@
 {
   "faq": "常見問題",
-  "iam": "我是{{ author.name }}",
+  "iam": "我是{{authorName}}",
   "insurance": "保險",
   "key": "{{what}} 是 {{how}}",
   "look": {

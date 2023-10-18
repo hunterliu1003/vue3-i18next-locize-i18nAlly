@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useTranslation, TranslationComponent } from "./i18next-vue"
+import { useTranslation, TranslationComponent } from "i18next-vue"
 import { computed } from "vue"
 import LanguageSwitcher from './components/LanguageSwitcher.vue'
 
@@ -16,10 +16,15 @@ const translationComponentExample = `
 
 
 const error404 = '404'
-const textError404 = computed(() => t([`error.${error404}`, 'error.unspecific'])) // -> "The page was not found"
+const textError404 = computed(() => t([`error.${error404}`, 'error.unspecific']))
 
 const error502 = '502'
-const textError502 = computed(() => t([`error.${error502}`, 'error.unspecific'])) // -> "Something went wrong"
+
+// @ts-expect-error
+// This is expected ts error.
+const textError502 = computed(() => t(`error.${error502}`))
+// If `error.502` is not defined in our translation file, we can fix the error by given a `defaultValue`
+const fixed_textError502 = computed(() => t(`error.${error502}`, { defaultValue: t('error.unspecific') }))
 
 const author = {
   name: 'Hunter',
@@ -52,13 +57,13 @@ const author = {
     <div>{{ textError404 }}</div>
 
     <div>textError502:</div>
-    <div>{{ textError502 }}</div>
+    <div>{{ fixed_textError502 }}</div>
 
     <div>What is How</div>
     <div>{{ t('key', { what: 'asdf', how: '4312' }) }}</div>
 
     <div>Who am I</div>
-    <div>{{ t('iam', { author }) }}</div>
+    <div>{{ t('iam', { authorName: author.name }) }}</div>
 
     <div>Nesting</div>
     <div>

@@ -1,6 +1,6 @@
 {
   "faq": "FAQ",
-  "iam": "私わ{{ author.name }}です",
+  "iam": "私わ{{authorName}}です",
   "insurance": "保険",
   "key": "{{what}} は {{how}}",
   "look": {

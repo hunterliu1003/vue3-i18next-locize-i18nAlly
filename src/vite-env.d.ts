@@ -1,6 +1,6 @@
 /// <reference types="vite/client" />
 
-import Resources from './@types/resources';
+import Resources from './resources.d.ts';
 
 declare module 'i18next' {
   interface CustomTypeOptions {

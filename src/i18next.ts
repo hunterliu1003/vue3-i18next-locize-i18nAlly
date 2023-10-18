@@ -1,11 +1,11 @@
 import { Plugin } from 'vue'
 import _i18next from 'i18next'
-import I18NextVue from './i18next-vue'
+import I18NextVue from 'i18next-vue'
 import LanguageDetector from 'i18next-browser-languagedetector'
 import BackendChained, { ChainedBackendOptions } from 'i18next-chained-backend'
 import BackendLocalStorage, { LocalStorageBackendOptions } from 'i18next-localstorage-backend'
 import resourcesToBackend from 'i18next-resources-to-backend'
-import BackendHttp, { HttpBackendOptions } from 'i18next-http-backend'
+// import BackendHttp, { HttpBackendOptions } from 'i18next-http-backend'
 import BackendLocize, { LocizeBackendOptions } from 'i18next-locize-backend'
 import { locizePlugin } from 'locize'
 
@@ -22,9 +22,9 @@ const backendLocalStorageOptions: LocalStorageBackendOptions = {
   store: typeof window !== 'undefined' ? window.localStorage : null
 }
 
-const backendHttpOptions: HttpBackendOptions = {
-  loadPath: '/locales/{{lng}}/{{ns}}.json'
-}
+// const backendHttpOptions: HttpBackendOptions = {
+//   loadPath: '/locales/{{lng}}/{{ns}}.json'
+// }
 
 const backendLocizeOptions: LocizeBackendOptions = {
   projectId: '6db84fbf-323e-4089-a4c8-d50e0583a316',
@@ -48,13 +48,13 @@ export const i18next: Plugin = {
           backends: [
             BackendLocalStorage,
             resourcesToBackend((language: any, namespace: any) => import(`./locales/${language}/${namespace}.json`)),
-            BackendHttp,
+            // BackendHttp,
             BackendLocize,
           ],
           backendOptions: [
             backendLocalStorageOptions,
             {},
-            backendHttpOptions,
+            // backendHttpOptions,
             backendLocizeOptions,
           ]
         }
