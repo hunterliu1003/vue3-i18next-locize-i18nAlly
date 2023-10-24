@@ -35,7 +35,8 @@ const author = {
 <template>
   <LanguageSwitcher />
   <h1>Language: {{ i18next.language }}</h1>
-
+  <div>xxx: {{ $t('next a b c', { qq: 'xyz' }) }}</div>
+  <div>yyy: {{ $t('next a b c d.test', { vv: '123' }) }}</div>
   <h2>Basic Usage</h2>
   <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
     <div>inline: </div>

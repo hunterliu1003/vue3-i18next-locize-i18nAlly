@@ -42,17 +42,19 @@ export const i18next: Plugin = {
         load: 'currentOnly', // https://www.npmjs.com/package/i18next-http-backend#troubleshooting
         fallbackLng: 'en',
         interpolation: {
-          skipOnVariables: false
+          skipOnVariables: false,
+          suffix: '}',
+          prefix: '{'
         },
         backend: {
           backends: [
-            BackendLocalStorage,
+            // BackendLocalStorage,
             resourcesToBackend((language: any, namespace: any) => import(`./locales/${language}/${namespace}.json`)),
             // BackendHttp,
             BackendLocize,
           ],
           backendOptions: [
-            backendLocalStorageOptions,
+            // backendLocalStorageOptions,
             {},
             // backendHttpOptions,
             backendLocizeOptions,

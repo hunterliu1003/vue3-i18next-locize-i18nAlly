@@ -16,7 +16,11 @@ interface Resources {
     "message": "Open the <slot>faq-link</slot> page.",
     "nesting1": "1 $t(nesting2)",
     "nesting2": "2 $t(nesting3)",
-    "nesting3": "3"
+    "nesting3": "3",
+    "next a b c": "next a b c {{qq}}",
+    "next a b c d": {
+      "test": "next a b c d {{vv}} test"
+    }
   }
 }
 
