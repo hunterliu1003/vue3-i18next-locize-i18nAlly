@@ -8,7 +8,9 @@
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "gen:i18next-interface": "i18next-resources-for-ts interface -i ./src/locales/en -o ./src/resources.d.ts",
-    "locize-sync": "locize sync --path ./src/locales --project-id 6db84fbf-323e-4089-a4c8-d50e0583a316 --api-key b69c537a-dace-4b21-9fa9-a09145224fc5 --reference-language-only false",
+    "locize-sync": "locize sync --path ./src/locales --project-id 6db84fbf-323e-4089-a4c8-d50e0583a316 --api-key b69c537a-dace-4b21-9fa9-a09145224fc5",
+    "locize-sync-all": "locize sync --path ./src/locales --project-id 6db84fbf-323e-4089-a4c8-d50e0583a316 --api-key b69c537a-dace-4b21-9fa9-a09145224fc5 --reference-language-only false",
+    "locize-sync-overwrite": "locize sync --path ./src/locales --project-id 6db84fbf-323e-4089-a4c8-d50e0583a316 --api-key b69c537a-dace-4b21-9fa9-a09145224fc5 --reference-language-only false --update-values true",
     "locize-download": "locize download --path ./src/locales --project-id 6db84fbf-323e-4089-a4c8-d50e0583a316 --api-key b69c537a-dace-4b21-9fa9-a09145224fc5"
   },
   "dependencies": {
