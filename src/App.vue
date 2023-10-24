@@ -5,7 +5,7 @@ import LanguageSwitcher from './components/LanguageSwitcher.vue'
 
 const { i18next } = useTranslation()
 
-const { t } = useTranslation('translation')
+const { t } = useTranslation('common')
 const nameSpaceA = useTranslation('namespaceA')
 
 const textInsurance = computed(() => t('insurance'))
@@ -38,9 +38,9 @@ const author = {
 <template>
   <LanguageSwitcher />
   <h1>Language: {{ i18next.language }}</h1>
-  
+
   <div>xxx: {{ nameSpaceA.t('the the only exist in namespaceA namespace') }}</div>
-  <div>yyy: {{ t('next a b c', {}) }}</div>
+  <div>yyy: {{ t('next a b c') }}</div>
   <div>zzz: {{ t('next a b c d.test', { vv: '123' }) }}</div>
 
   <h2>Basic Usage</h2>
@@ -52,7 +52,7 @@ const author = {
     <div>{{ textInsurance }}</div>
 
     <div>inline with $t: </div>
-    <div>{{ $t('insurance', { ns: 'translation' }) }}</div>
+    <div>{{ t('insurance', { ns: 'common' }) }}</div>
 
     <div>Nested key: </div>
     <div>{{ t('look.deep') }}</div>
@@ -93,7 +93,7 @@ const author = {
   </div>
 
   <h2>Use by TranslationComponent with slot</h2>
-  <TranslationComponent :translation="$t('message')">
+  <TranslationComponent :translation="t('message')">
     <template #faq-link>
       <a>{{ $t("faq") }}</a>
     </template>
