@@ -1,8 +1,14 @@
 {
+  "error": {
+    "404": "找不到該頁面。",
+    "unspecific": "出了些問題。"
+  },
   "faq": "常見問題",
   "iam": "我是{{authorName}}",
   "insurance": "保險",
   "key": "{{what}} 是 {{how}}",
+  "key1": "你好，世界",
+  "key2": "說： {{val}}",
   "look": {
     "deep": "look deep 的價值"
   },
@@ -10,6 +16,10 @@
   "nesting1": "1 $t(nesting2)",
   "nesting2": "2 $t(nesting3)",
   "nesting3": "3",
+  "next a b c": "下一個 a b c {{qq}}",
+  "next a b c d": {
+    "test": "下一個 a b c d {{vv}} 測試"
+  },
   "test": "測試",
   "test777": "TW 測試 - 777"
 }

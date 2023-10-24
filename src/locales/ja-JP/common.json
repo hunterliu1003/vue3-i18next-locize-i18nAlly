@@ -1,8 +1,14 @@
 {
+  "error": {
+    "404": "ページが見つかりませんでした。",
+    "unspecific": "不明なエラーが発生しました。"
+  },
   "faq": "FAQ",
   "iam": "私わ{{authorName}}です",
   "insurance": "保険",
   "key": "{{what}} は {{how}}",
+  "key1": "こんにちは世界",
+  "key2": "言う： {{val}}",
   "look": {
     "deep": "look deep の価値"
   },
