@@ -7,7 +7,7 @@ interface Resources {
     "faq": "FAQ",
     "iam": "I am {{authorName}}",
     "insurance": "Insurance",
-    "key": "{what} is {{how}}",
+    "key": "{{what}} is {{how}}",
     "key1": "hello world",
     "key2": "say: {{val}}",
     "look": {
@@ -20,7 +20,9 @@ interface Resources {
     "next a b c": "next a b c {{qq}}",
     "next a b c d": {
       "test": "next a b c d {{vv}} test"
-    }
+    },
+    "test": "test",
+    "test777": "test - 777"
   },
   "namespaceA": {
     "the the only exist in namespaceA namespace": "namespace A for en"
