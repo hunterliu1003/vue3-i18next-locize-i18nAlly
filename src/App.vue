@@ -3,7 +3,10 @@ import { useTranslation, TranslationComponent } from "i18next-vue"
 import { computed } from "vue"
 import LanguageSwitcher from './components/LanguageSwitcher.vue'
 
-const { i18next, t } = useTranslation()
+const { i18next } = useTranslation()
+
+const { t } = useTranslation('translation')
+const nameSpaceA = useTranslation('namespaceA')
 
 const textInsurance = computed(() => t('insurance'))
 
@@ -35,8 +38,11 @@ const author = {
 <template>
   <LanguageSwitcher />
   <h1>Language: {{ i18next.language }}</h1>
-  <div>xxx: {{ $t('next a b c', { qq: 'xyz' }) }}</div>
-  <div>yyy: {{ $t('next a b c d.test', { vv: '123' }) }}</div>
+  
+  <div>xxx: {{ nameSpaceA.t('the the only exist in namespaceA namespace') }}</div>
+  <div>yyy: {{ t('next a b c', {}) }}</div>
+  <div>zzz: {{ t('next a b c d.test', { vv: '123' }) }}</div>
+
   <h2>Basic Usage</h2>
   <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
     <div>inline: </div>
@@ -46,7 +52,7 @@ const author = {
     <div>{{ textInsurance }}</div>
 
     <div>inline with $t: </div>
-    <div>{{ $t('insurance') }}</div>
+    <div>{{ $t('insurance', { ns: 'translation' }) }}</div>
 
     <div>Nested key: </div>
     <div>{{ t('look.deep') }}</div>
