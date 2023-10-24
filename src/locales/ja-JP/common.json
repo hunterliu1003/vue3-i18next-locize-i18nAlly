@@ -10,5 +10,6 @@
   "nesting1": "1 $t(nesting2)",
   "nesting2": "2 $t(nesting3)",
   "nesting3": "3",
-  "test": "テスト"
+  "test": "テスト",
+  "test777": "測試 - 777"
 }
