@@ -20,5 +20,6 @@
   "next a b c d": {
     "test": "next a b c d {{vv}} test"
   },
+  "test": "test",
   "test777": "test - 777"
 }
